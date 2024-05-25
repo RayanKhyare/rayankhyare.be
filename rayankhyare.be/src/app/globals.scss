@@ -1,0 +1,77 @@
+body{
+    background-color:#000000;
+    padding: 50px 800px;
+    
+
+    main{
+        padding:100px 0px;
+
+        h1{
+            color:#ffffff;
+            font-size: 1.875rem;
+            padding-top: 20px;
+        }
+
+        .introduction{
+            color: #B4B4B4;
+        }
+
+        h2{
+            font-size: 1.25rem;
+            color:#ffffff;
+            padding-top: 50px;
+        }
+    }
+}
+
+
+.d-flex{
+    display: flex;
+}
+
+.w-50{
+    width: 50%;
+}
+
+section{
+    padding: 15px 0px;
+}
+
+p{
+   color: #B4B4B4; 
+}
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 480px) {
+            body {
+                padding: 15px 25px;
+            }
+        }
+          
+        /* Media Query for low resolution  Tablets, Ipads */
+        @media (min-width: 481px) and (max-width: 767px) {
+            body {
+                padding: 15px 50px;
+            }
+        }
+          
+        /* Media Query for Tablets Ipads portrait mode */
+        @media (min-width: 768px) and (max-width: 1024px){
+            body {
+                padding: 29px 100px;
+            }
+        }
+          
+        /* Media Query for Laptops and Desktops */
+        @media (min-width: 1025px) and (max-width: 1280px){
+            body {
+                padding: 50px 400px;
+            }
+        }
+          
+        /* Media Query for Large screens */
+        @media (min-width: 1281px) {
+            body {
+                padding: 50px 800px;
+            }
+        }
