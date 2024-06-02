@@ -1,0 +1,16 @@
+.tool-card{
+    align-items: center;
+    flex: 0 0 calc(100% / 3 - 54px);
+    background-color: #111111;
+    border-radius: 5px;
+    padding: 25px 20px;
+    color: white;
+    text-decoration: none;
+    h3{
+        margin: 0px;
+        padding: 0px;
+        padding-left: 25px;
+        font-weight: 500;
+
+    }
+}
