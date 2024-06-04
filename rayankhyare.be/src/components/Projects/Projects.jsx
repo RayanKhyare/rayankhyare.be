@@ -11,7 +11,7 @@ export default function Projects() {
 
     useEffect(() => {
       async function getProjects() {
-      const { data: projects } = await supabase.from('projects').select('*, technologies(*)');
+      const { data: projects } = await supabase.from('projects').select('*');
   
         if (projects.length > 1) {
           setProjects(projects)
@@ -34,7 +34,7 @@ console.log(projects);
     <section className='projects'>
     {projects.map((project) => (
         <article className='project' key={project.id}>
-            <a href={"/projects/" + project.name.toLowerCase().replace(/ /g, '_')}>
+            <a href={"/projects/" + project.slug}>
                 <img src={project.thumbnail} />
             </a>
         </article>

@@ -39,7 +39,7 @@ useEffect(() => {
       <section className='projects'>
         {projects.map((project) => (
             <article className='project' key={project.id}>
-                <a href={"/projects/" + project.name.toLowerCase().replace(/ /g, '_')}>
+                <a href={"/projects/" + project.slug}>
                     <img src={project.thumbnail} />
                 </a>
             </article>
