@@ -11,7 +11,7 @@ export default function Projects() {
 
     useEffect(() => {
       async function getProjects() {
-        const { data: projects } = await supabase.from('projects').select()
+      const { data: projects } = await supabase.from('projects').select('*, technologies(*)');
   
         if (projects.length > 1) {
           setProjects(projects)
@@ -20,6 +20,11 @@ export default function Projects() {
   
       getProjects()
     }, [])
+
+console.log(projects);
+
+
+
     
   return (
     <>
