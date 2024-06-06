@@ -65,8 +65,28 @@ export default function Project() {
     
 
     <div className='technologies-container'>
-        <ToolCard logo={ReactLogo} name={'React'} siteURL={'https://reactjs.org/'} />
+      {tools.map((tool) => (
+        <ToolCard logo={tool.technologies.logo} name={tool.technologies.name} siteURL="https://reactjs.org/" />
+      ))}
     </div>
+    </section>
+
+    <section className='project-links'>
+      <h2>Links</h2>
+
+      <div className='technologies-container'>
+      {tools.map((tool) => (
+          <ToolCard logo={tool.technologies.logo} name={tool.technologies.name} siteURL="https://reactjs.org/" />
+        ))}
+      </div>
+    </section>
+
+    <section className="project-description">
+      <p>Learnify is a website that I have created for my bachelor's thesis. Its purpose is to provide a new way of teaching for educators and a better way of taking online lessons for students.
+        
+        Sometimes, online lessons can be tedious to sit through for hours on end. That's why I have endeavored to create an experience that closely resembles the one someone might have when attending a lesson in person. 
+
+        I have achieved this by adding interactive features to the site, such as polls and question-and-answer sessions, to foster real interaction between students and teachers.</p>
     </section>
     </>
   )
