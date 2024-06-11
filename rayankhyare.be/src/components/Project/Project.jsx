@@ -7,6 +7,7 @@ import ReactLogo from '../../assets/reactjs.svg';
 export default function Project() {
   const [project, setProject] = useState({});
   const [tools, setTools] = useState([]);
+  const [links, setLinks] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -42,7 +43,19 @@ export default function Project() {
         setTools(techData);
       }
 
-      console.log(tools);
+      const { data: linkData, error: linkError } = await supabase
+      .from('links')
+      .select('*')
+      .eq('project_id', projectId);
+      
+      console.log(linkData);
+  
+    if (linkError) {
+      console.error('Error fetching technologies:', linkData);
+    } else {
+      setLinks(linkData);
+    }
+
 
       setLoading(false); // Set loading to false after the data has been fetched
     };
