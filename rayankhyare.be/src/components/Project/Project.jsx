@@ -8,6 +8,7 @@ export default function Project() {
   const [project, setProject] = useState({});
   const [tools, setTools] = useState([]);
   const [links, setLinks] = useState([]);
+  const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -51,10 +52,23 @@ export default function Project() {
       console.log(linkData);
   
     if (linkError) {
-      console.error('Error fetching technologies:', linkData);
+      console.error('Error fetching links:', linkData);
     } else {
       setLinks(linkData);
     }
+
+    const { data: contentData, error: contentError } = await supabase
+    .from('articles')
+    .select('*')
+    .eq('project_id', projectId);
+    
+    console.log(contentData);
+
+  if (contentError) {
+    console.error('Error fetching content:', contentData);
+  } else {
+    setContent(contentData);
+  }
 
 
       setLoading(false); // Set loading to false after the data has been fetched
@@ -100,6 +114,11 @@ export default function Project() {
         Sometimes, online lessons can be tedious to sit through for hours on end. That's why I have endeavored to create an experience that closely resembles the one someone might have when attending a lesson in person. 
 
         I have achieved this by adding interactive features to the site, such as polls and question-and-answer sessions, to foster real interaction between students and teachers.</p>
+
+      {content.map((content) => (<>
+        {content.content}
+        </>
+        ))}
     </section>
     </>
   )
