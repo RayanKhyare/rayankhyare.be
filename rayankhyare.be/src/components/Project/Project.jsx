@@ -1,5 +1,8 @@
 import React , { useEffect, useState } from 'react';
 import { supabase } from '../../utils/supabase'
+import parse from 'html-react-parser';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import "./project.scss"
 import ToolCard from '../ToolCard/ToolCard'
 import ReactLogo from '../../assets/reactjs.svg';
@@ -64,11 +67,11 @@ export default function Project() {
     
     console.log(contentData);
 
-  if (contentError) {
-    console.error('Error fetching content:', contentData);
-  } else {
-    setContent(contentData);
-  }
+    if (contentError) {
+      console.error('Error fetching content:', contentData);
+    } else {
+      setContent(contentData);
+    }
 
 
       setLoading(false); // Set loading to false after the data has been fetched
@@ -84,6 +87,7 @@ export default function Project() {
 
   return (
     <>
+    
     <h1>{project.name && project.name}</h1>
     <p>{project.small_description && project.small_description}</p>
 
@@ -109,14 +113,9 @@ export default function Project() {
     </section>
 
     <section className="project-description">
-      <p>Learnify is a website that I have created for my bachelor's thesis. Its purpose is to provide a new way of teaching for educators and a better way of taking online lessons for students.
-        
-        Sometimes, online lessons can be tedious to sit through for hours on end. That's why I have endeavored to create an experience that closely resembles the one someone might have when attending a lesson in person. 
-
-        I have achieved this by adding interactive features to the site, such as polls and question-and-answer sessions, to foster real interaction between students and teachers.</p>
 
       {content.map((content) => (<>
-        {content.content}
+        {parse(content.content) || <Skeleton count={10} />}
         </>
         ))}
     </section>
