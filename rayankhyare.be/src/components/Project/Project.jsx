@@ -49,7 +49,7 @@ export default function Project() {
 
       const { data: linkData, error: linkError } = await supabase
       .from('links')
-      .select('*')
+      .select('platforms(*), *')
       .eq('project_id', projectId);
       
       console.log(linkData);
@@ -97,7 +97,7 @@ export default function Project() {
 
     <div className='technologies-container'>
       {tools.map((tool) => (
-        <ToolCard logo={tool.technologies.logo} name={tool.technologies.name} siteURL="https://reactjs.org/" />
+        <ToolCard logo={tool.technologies.logo} name={tool.technologies.name} siteURL={tool.technologies.url} />
       ))}
     </div>
     </section>
@@ -106,8 +106,8 @@ export default function Project() {
       <h2>Links</h2>
 
       <div className='technologies-container'>
-      {tools.map((tool) => (
-          <ToolCard logo={tool.technologies.logo} name={tool.technologies.name} siteURL="https://reactjs.org/" />
+      {links.map((link) => (
+          <ToolCard logo={link.platforms.logo_url} name={link.platforms.name} siteURL={link.url} />
         ))}
       </div>
     </section>
