@@ -3,6 +3,7 @@ import { supabase } from '../../utils/supabase'
 import parse from 'html-react-parser';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { Helmet } from 'react-helmet';
 import "./project.scss"
 import ToolCard from '../ToolCard/ToolCard'
 import ReactLogo from '../../assets/reactjs.svg';
@@ -87,6 +88,11 @@ export default function Project() {
 
   return (
     <>
+
+    <Helmet>
+        <title>{project.name && project.name}</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
     
     <h1>{project.name && project.name}</h1>
     <p>{project.small_description && project.small_description}</p>

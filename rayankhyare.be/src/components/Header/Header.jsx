@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./header.scss";
 import { useNavigate, useLocation } from "react-router-dom";
 import moonIcon from "../../assets/moon_icon.svg";
+import resume from "../../assets/rayankhyare_resume.pdf";
 
 
 export default function Header() {
@@ -39,7 +40,7 @@ export default function Header() {
         </a>
       </li>
       <li>
-        <a href="/contact">
+        <a href={resume} target='_blank'>
           RESUME
         </a>
       </li>

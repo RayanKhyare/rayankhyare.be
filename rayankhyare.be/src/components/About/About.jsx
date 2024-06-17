@@ -1,8 +1,8 @@
 import "./about.scss";
-
 import CompanyCard from "../CompanyCard/CompanyCard";
 import Toolcard from "../ToolCard/ToolCard";
 import Map from "../Map/Map";
+import { Helmet } from 'react-helmet';
 
 import twomproveLogo from "../../assets/2mprove.png";
 import studiostudioLogo from "../../assets/studiostudio.png";
@@ -16,12 +16,22 @@ import adobecsLogo from "../../assets/adobecs.svg";
 import wordpressLogo from "../../assets/wordpress.svg";
 import figmaLogo from "../../assets/figma.svg";
 import downloadBtn from "../../assets/downloadbtn.svg";
+import resume from "../../assets/rayankhyare_resume.pdf";
 
 
 
 export default function About() {
+
+
+    
   return (
     <div className="aboutpage">
+
+    <Helmet>
+        <title>ABOUT ME</title>
+        <meta name="description" content="Hi, I'm Rayan Khyare, a 21-year-old web developer with Moroccan roots, based in Belgium." />
+    </Helmet>
+
     <h1>About me</h1>
     <section className="d-flex">
       <div className="w-50" style={{paddingRight: "50px" , color: "#B4B4B4"}}>
@@ -71,7 +81,7 @@ export default function About() {
       <h2>Resume</h2>
       <p>Interested in learning more about my background and experience? 
         <br></br>
-        You can download my full resume here <img src={downloadBtn} width={20} height={20} alt="Download button" /> </p>
+        You can download my full resume <a href={resume} target='_blank'>here <img src={downloadBtn} width={20} height={20} alt="Download button" /></a> </p>
     </section>
 </div>
   )

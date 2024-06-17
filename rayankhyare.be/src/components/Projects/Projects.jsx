@@ -1,6 +1,7 @@
 import React , { useState, useEffect } from 'react'
 import "./projects.scss"
 import { supabase } from '../../utils/supabase'
+import { Helmet } from 'react-helmet';
 
 import ehb from '../../assets/ehb.png'
 
@@ -28,6 +29,12 @@ console.log(projects);
     
   return (
     <>
+    <Helmet>
+        <title>PROJECTS</title>
+        <meta name="description" content="Explore my web development projects. Each project demonstrates my commitment to creating exceptional digital experiences." />
+    </Helmet>
+
+
     <h1>Projects</h1>
     <p>Explore my web development projects. <br></br>Each project demonstrates my commitment to creating exceptional digital experiences.</p>
     
