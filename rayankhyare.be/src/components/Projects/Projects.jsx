@@ -2,7 +2,7 @@ import React , { useState, useEffect } from 'react'
 import "./projects.scss"
 import { supabase } from '../../utils/supabase'
 import { Helmet } from 'react-helmet';
-
+import { motion } from "framer-motion"
 import ehb from '../../assets/ehb.png'
 
 
@@ -35,10 +35,26 @@ console.log(projects);
     </Helmet>
 
 
-    <h1>Projects</h1>
-    <p>Explore my web development projects. <br></br>Each project demonstrates my commitment to creating exceptional digital experiences.</p>
+    <motion.h1
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          >Projects</motion.h1>
+    <motion.p
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >Explore my web development projects. <br></br>Each project demonstrates my commitment to creating exceptional digital experiences.</ motion.p>
     
-    <section className='projects'>
+    <motion.section 
+    className='projects'
+    initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ delay: 0.2 ,duration: 0.4, ease: "easeInOut" }}  
+      >
     {projects.map((project) => (
         <article className='project' key={project.id}>
             <a href={"/projects/" + project.slug}>
@@ -46,7 +62,7 @@ console.log(projects);
             </a>
         </article>
       ))}
-    </section>
+    </motion.section>
     </>
   )
 }

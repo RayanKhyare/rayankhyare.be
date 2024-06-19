@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+$background-color-dark: #000000;
+$background-color-light: #ffffff;
+$text-color-light: #000000;
+$text-color-dark: #ffffff;
+$light-gray-dark:#B4B4B4;
+$light-gray-light:#6a6a6a;;
+$header-color:#EEEEEE;
 
 body{
-  background-color:#000000;
+  background-color:$background-color-dark;
   margin: 0px;
   font-family: "Inter", sans-serif;
   padding:100px 0px;
@@ -11,21 +18,56 @@ body{
       padding:100px 0px;
       text-align: left;
       h1{
-          color:#ffffff;
+          color:$text-color-dark;
           font-size: 1.875rem;
           padding-top: 20px;
       }
 
       .introduction{
-          color: #B4B4B4;
+          color: $light-gray-dark;
       }
 
       h2{
           font-size: 1.25rem;
-          color:#ffffff;
+          color:$text-color-dark;
           padding-top: 5px;
       }
   }
+
+  p{
+    color: $light-gray-dark; 
+   }
+
+   header h1 a{
+    text-decoration: none;
+    color: $text-color-dark;
+   }
+}
+
+body.light{
+  background-color:$background-color-light;
+  main{
+      h1{
+          color:$text-color-light;
+      }
+
+      .introduction{
+          color: $light-gray-light;
+      }
+
+      h2{
+          color:$text-color-light;
+      }
+  }
+
+  p{
+    color: $light-gray-light; 
+   }
+
+   header h1 a{
+    text-decoration: none;
+    color: $text-color-light;
+   }
 }
 
 
@@ -41,9 +83,7 @@ section{
   padding: 15px 0px;
 }
 
-p{
- color: #B4B4B4; 
-}
+
 
 @media (max-width: 3000px) {
   body {

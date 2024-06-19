@@ -3,6 +3,7 @@ import CompanyCard from "../CompanyCard/CompanyCard";
 import Toolcard from "../ToolCard/ToolCard";
 import Map from "../Map/Map";
 import { Helmet } from 'react-helmet';
+import { motion } from "framer-motion"
 
 import twomproveLogo from "../../assets/2mprove.png";
 import studiostudioLogo from "../../assets/studiostudio.png";
@@ -32,8 +33,19 @@ export default function About() {
         <meta name="description" content="Hi, I'm Rayan Khyare, a 21-year-old web developer with Moroccan roots, based in Belgium." />
     </Helmet>
 
-    <h1>About me</h1>
-    <section className="d-flex">
+    <motion.h1
+         initial={{ opacity: 0, y: 25 }}
+         animate={{ opacity: 1, y: 0 }}
+         exit={{ opacity: 0 }}
+         transition={{ duration: 0.5, ease: "easeInOut" }}
+         >
+          About me</motion.h1>
+    <motion.section className="d-flex"
+    initial={{ opacity: 0, y: 25 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0 }}
+    transition={{ delay: 0.25 ,duration: 0.5, ease: "easeInOut" }}
+    >
       <div className="w-50" style={{paddingRight: "50px" , color: "#B4B4B4"}}>
         <p>
           Hi, I&apos;m Rayan Khyare, a 21-year-old web developer with Moroccan roots, based in Belgium. 
@@ -48,9 +60,14 @@ export default function About() {
       <div className="w-50">
         <Map lng={4.351697} lat={50.8465573} zoom={4} pitch={25} height={'235px'} />
       </div>
-    </section>
+    </motion.section>
 
-    <section>
+    <motion.section
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.5 ,duration: 0.5, ease: "easeInOut" }}
+    >
       <h2>Experience</h2>
       <p style={{ color: "#B4B4B4"}}>Here is where I draw my experience from:</p>
 
@@ -59,7 +76,7 @@ export default function About() {
         <CompanyCard logo={studiostudioLogo} companyName={'Studio Studio'} jobTitle={'Intern Web Developer'} location={'Ghent'} duration={'Jan 2023 - April 2023'} />
         <CompanyCard logo={ehbLogo} companyName={'Erasmus Hogeschool Brussels'} jobTitle={'Student Multimedia & Creative Technologies'} location={'Brussels'} duration={'Sept 2020 - June 2023'} />
       </div>
-    </section>
+    </motion.section>
 
     
     <section>
