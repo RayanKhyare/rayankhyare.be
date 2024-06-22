@@ -16,7 +16,9 @@ import angularLogo from "../../assets/angular.svg";
 import adobecsLogo from "../../assets/adobecs.svg";
 import wordpressLogo from "../../assets/wordpress.svg";
 import linkedinLogo from "../../assets/linkedin.svg";
+import githubLogo from "../../assets/github.svg";
 import figmaLogo from "../../assets/figma.svg";
+import discordLogo from "../../assets/discord.svg";
 import downloadBtn from "../../assets/downloadbtn.svg";
 import resume from "../../assets/rayankhyare_resume.pdf";
 
@@ -80,7 +82,12 @@ export default function About() {
     </motion.section>
 
     
-    <section>
+    <motion.section
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.7 ,duration: 0.5, ease: "easeInOut" }}
+    >
       <h2>Technologies</h2>
       <p style={{ width:"75%"}}>I specialize in JavaScript, React, Node.js, and web development as a whole. <br></br>Here are a few technologies I have come to love:</p>
       <div className="technologies-container">
@@ -93,9 +100,14 @@ export default function About() {
         <Toolcard logo={wordpressLogo} name={'WordPress'} siteURL={'https://wordpress.com/en'} />
         <Toolcard logo={figmaLogo} name={'Figma'} siteURL={'https://www.figma.com/'} />
       </div>
-    </section>
+      </motion.section>
 
-    <section>
+      <motion.section
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.9 ,duration: 0.5, ease: "easeInOut" }}
+    >
       <h2>Resume</h2>
       <p>Interested in learning more about my background and experience? 
         <br></br>
@@ -103,9 +115,12 @@ export default function About() {
         <p>You can also contact me on the following platforms:</p>
         <div className="technologies-container">
           <Toolcard logo={linkedinLogo} name={'Linkedin'} siteURL={'https://www.linkedin.com/in/rayankhyare/'} />
-          
+          <Toolcard logo={githubLogo} name={'Github'} siteURL={'https://github.com/RayanKhyare'} />
+          {/* <Toolcard logo={discordLogo} name={'Discord'} siteURL={'https://github.com/RayanKhyare'} /> */}
+
+
       </div>
-    </section>
+      </motion.section>
 </div>
   )
 }

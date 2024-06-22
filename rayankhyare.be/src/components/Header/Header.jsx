@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./header.scss";
 import { useNavigate, useLocation } from "react-router-dom";
 import moonIcon from "../../assets/moon_icon.svg";
+import sunIcon from "../../assets/sun_icon.svg";
 import resume from "../../assets/rayankhyare_resume.pdf";
 import { motion } from "framer-motion"
 
@@ -69,13 +70,29 @@ const handleModeChange = () => {
   
     <div>
 
+      {darkMode ? (
+
     <img
       onClick={handleModeChange}
       src={moonIcon}// Notice the path starts from the public directory
       alt="Moon Icon"
       width={30} // these are values for example
       height={30}
+      className="moon-icon"
     />
+
+    ) : (
+
+    <img
+      onClick={handleModeChange}
+      src={sunIcon}// Notice the path starts from the public directory
+      alt="Moon Icon"
+      width={30} // these are values for example
+      height={30}
+      className="sun-icon"
+    />
+
+    )}
     </div>
   </header>
   )

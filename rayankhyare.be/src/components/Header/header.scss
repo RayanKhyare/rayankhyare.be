@@ -39,4 +39,8 @@ header{
         }
     }
 
+    .sun-icon{
+        filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(980%) hue-rotate(180deg) brightness(89%) contrast(79%);
+    }
+
 }

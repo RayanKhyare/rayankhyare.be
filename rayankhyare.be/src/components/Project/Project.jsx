@@ -104,17 +104,20 @@ export default function Project() {
     <h1>{project.name && project.name}</h1>
     <p>{project.small_description && project.small_description}</p>
 
-    <section className='technologies'>
-    <h2>Technologies</h2>
-    
 
-    <div className='technologies-container'>
-      {tools.map((tool) => (
-        <ToolCard logo={tool.technologies.logo} name={tool.technologies.name} siteURL={tool.technologies.url} />
-      ))}
-    </div>
-    </section>
+    {tools.length > 0 && (
+      <section className='technologies'>
+        <h2>Technologies</h2>
+        <div className='technologies-container'>
+          {tools.map((tool) => (
+            <ToolCard logo={tool.technologies.logo} name={tool.technologies.name} siteURL={tool.technologies.url} />
+          ))}
+        </div>
+      </section>
+    )}
 
+
+{links.length > 0 && (
     <section className='project-links'>
       <h2>Links</h2>
 
@@ -124,6 +127,7 @@ export default function Project() {
         ))}
       </div>
     </section>
+    )}
 
     <section className="project-description">
 
