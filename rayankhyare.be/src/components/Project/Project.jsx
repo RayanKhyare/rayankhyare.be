@@ -1,7 +1,8 @@
 import React , { useEffect, useState } from 'react';
 import { supabase } from '../../utils/supabase'
 import parse from 'html-react-parser';
-import Skeleton from 'react-loading-skeleton'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+
 import 'react-loading-skeleton/dist/skeleton.css'
 import { Helmet } from 'react-helmet';
 import "./project.scss"
@@ -83,7 +84,13 @@ export default function Project() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // Display a loading message while the data is being fetched
+        return (
+        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+        <p>
+          <Skeleton count={50} />
+        </p>
+      </SkeletonTheme>
+      ) 
   }
 
   return (

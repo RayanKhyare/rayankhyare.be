@@ -5,7 +5,9 @@ $background-color-light: #ffffff;
 $text-color-light: #000000;
 $text-color-dark: #ffffff;
 $light-gray-dark:#B4B4B4;
-$light-gray-light:#6a6a6a;;
+$light-gray-light:#6a6a6a;
+$toolcard-bg-dark:#111111;
+$toolcard-bg-light:#F9F9F9;
 $header-color:#EEEEEE;
 
 body{
@@ -42,6 +44,15 @@ body{
     text-decoration: none;
     color: $text-color-dark;
    }
+
+   .tool-card{
+    background-color: $toolcard-bg-dark;
+    color: $text-color-dark;
+  }
+
+  a {
+    color: $text-color-dark;
+  }
 }
 
 body.light{
@@ -58,6 +69,10 @@ body.light{
       h2{
           color:$text-color-light;
       }
+
+      h3{
+        color:$text-color-light;
+    }
   }
 
   p{
@@ -68,6 +83,18 @@ body.light{
     text-decoration: none;
     color: $text-color-light;
    }
+
+   .tool-card{
+    background-color: $toolcard-bg-light;
+    color: $text-color-light;
+    img{
+      filter: invert(100%);
+    }
+  }
+
+  a {
+    color: $text-color-light;
+  }
 }
 
 

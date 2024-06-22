@@ -15,6 +15,7 @@ import nodejsLogo from "../../assets/nodejs.svg";
 import angularLogo from "../../assets/angular.svg";
 import adobecsLogo from "../../assets/adobecs.svg";
 import wordpressLogo from "../../assets/wordpress.svg";
+import linkedinLogo from "../../assets/linkedin.svg";
 import figmaLogo from "../../assets/figma.svg";
 import downloadBtn from "../../assets/downloadbtn.svg";
 import resume from "../../assets/rayankhyare_resume.pdf";
@@ -99,6 +100,11 @@ export default function About() {
       <p>Interested in learning more about my background and experience? 
         <br></br>
         You can download my full resume <a href={resume} target='_blank'>here <img src={downloadBtn} width={20} height={20} alt="Download button" /></a> </p>
+        <p>You can also contact me on the following platforms:</p>
+        <div className="technologies-container">
+          <Toolcard logo={linkedinLogo} name={'Linkedin'} siteURL={'https://www.linkedin.com/in/rayankhyare/'} />
+          
+      </div>
     </section>
 </div>
   )

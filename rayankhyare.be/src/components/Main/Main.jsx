@@ -6,21 +6,24 @@ import { motion } from "framer-motion"
 export default function Main() {
 
   const [projects, setProjects] = useState([])
-
-useEffect(() => {
-  async function getProjects() {
-    const { data: projects } = await supabase
-      .from('projects')
-      .select()
-      .limit(4);
-
-    if (projects.length > 0) {
-      setProjects(projects);
+  
+  useEffect(() => {
+    async function getProjects() {
+      const projectIds = [1, 2, 3, 4]; // Replace with your desired project ids
+  
+      const { data: projects } = await supabase
+        .from('projects')
+        .select()
+        .in('id', projectIds)
+        .limit(4);
+  
+      if (projects.length > 0) {
+        setProjects(projects);
+      }
     }
-  }
-
-  getProjects();
-}, []);
+  
+    getProjects();
+  }, []);
 
   return (
     <>
