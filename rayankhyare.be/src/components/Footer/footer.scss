@@ -1,0 +1,14 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: 25px;
+        filter: brightness(0) saturate(100%) invert(44%) sepia(43%) saturate(0%) hue-rotate(298deg) brightness(84%) contrast(89%);
+    }
+
+    .contact_container{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+}

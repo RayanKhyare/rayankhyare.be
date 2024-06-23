@@ -19,6 +19,7 @@ import linkedinLogo from "../../assets/linkedin.svg";
 import githubLogo from "../../assets/github.svg";
 import figmaLogo from "../../assets/figma.svg";
 import discordLogo from "../../assets/discord.svg";
+import atIcon from "../../assets/at-icon.svg";
 import downloadBtn from "../../assets/downloadbtn.svg";
 import resume from "../../assets/rayankhyare_resume.pdf";
 
@@ -75,9 +76,9 @@ export default function About() {
       <p style={{ color: "#B4B4B4"}}>Here is where I draw my experience from:</p>
 
       <div>
-        <CompanyCard logo={twomproveLogo} companyName={'2MPROVE'} jobTitle={'Full Stack Developer'} location={'Ronse'} duration={'Nov 2023 - Present'} />
-        <CompanyCard logo={studiostudioLogo} companyName={'Studio Studio'} jobTitle={'Intern Web Developer'} location={'Ghent'} duration={'Jan 2023 - April 2023'} />
-        <CompanyCard logo={ehbLogo} companyName={'Erasmus Hogeschool Brussels'} jobTitle={'Student Multimedia & Creative Technologies'} location={'Brussels'} duration={'Sept 2020 - June 2023'} />
+        <CompanyCard logo={twomproveLogo} companyName={'2MPROVE'} companyWebsite={'https://www.2mprove.be/'} jobTitle={'Full Stack Developer'} location={'Ronse'} duration={'Nov 2023 - Present'} />
+        <CompanyCard logo={studiostudioLogo} companyName={'Studio Studio'} companyWebsite={'https://studiostudio.be/'} jobTitle={'Intern Web Developer'} location={'Ghent'} duration={'Jan 2023 - April 2023'} />
+        <CompanyCard logo={ehbLogo} companyName={'Erasmus Hogeschool Brussels'} companyWebsite={'https://www.erasmushogeschool.be/nl/opleidingen/multimedia-creatieve-technologie'} jobTitle={'Student Multimedia & Creative Technologies'} location={'Brussels'} duration={'Sept 2020 - June 2023'} />
       </div>
     </motion.section>
 
@@ -117,6 +118,7 @@ export default function About() {
           <Toolcard logo={linkedinLogo} name={'Linkedin'} siteURL={'https://www.linkedin.com/in/rayankhyare/'} />
           <Toolcard logo={githubLogo} name={'Github'} siteURL={'https://github.com/RayanKhyare'} />
           {/* <Toolcard logo={discordLogo} name={'Discord'} siteURL={'https://github.com/RayanKhyare'} /> */}
+          <Toolcard logo={atIcon} name={'E-mail'} siteURL={'mailto:rayankhyare@gmail.com'} />
 
 
       </div>
