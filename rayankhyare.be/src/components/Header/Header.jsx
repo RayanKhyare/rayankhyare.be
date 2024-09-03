@@ -3,7 +3,7 @@ import "./header.scss";
 import { useNavigate, useLocation } from "react-router-dom";
 import moonIcon from "../../assets/moon_icon.svg";
 import sunIcon from "../../assets/sun_icon.svg";
-import resume from "../../assets/rayankhyare_resume_nl.pdf";
+import resume from "../../assets/rayankhyare_resume_en.pdf";
 import { motion } from "framer-motion"
 
 export default function Header() {
