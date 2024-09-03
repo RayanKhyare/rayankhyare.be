@@ -44,7 +44,7 @@ export default function About() {
          transition={{ duration: 0.5, ease: "easeInOut" }}
          >
           About me</motion.h1>
-    <motion.section className="d-flex"
+    <motion.section className="d-flex description-container"
     initial={{ opacity: 0, y: 25 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0 }}
@@ -66,7 +66,7 @@ export default function About() {
       </div>
     </motion.section>
 
-    <motion.section
+    <motion.section className="experience-container"
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0 }}
@@ -76,21 +76,21 @@ export default function About() {
       <p style={{ color: "#B4B4B4"}}>Here is where I draw my experience from:</p>
 
       <div>
-        <CompanyCard logo={twomproveLogo} companyName={'2MPROVE'} companyWebsite={'https://www.2mprove.be/'} jobTitle={'Full Stack Developer'} location={'Ronse'} duration={'Nov 2023 - Present'} />
+        <CompanyCard logo={twomproveLogo} companyName={'2MPROVE'} companyWebsite={'https://www.2mprove.be/'} jobTitle={'Full Stack Developer'} location={'Ronse'} duration={'Sep 2023 - Present'} />
         <CompanyCard logo={studiostudioLogo} companyName={'Studio Studio'} companyWebsite={'https://studiostudio.be/'} jobTitle={'Intern Web Developer'} location={'Ghent'} duration={'Jan 2023 - April 2023'} />
         <CompanyCard logo={ehbLogo} companyName={'Erasmus Hogeschool Brussels'} companyWebsite={'https://www.erasmushogeschool.be/nl/opleidingen/multimedia-creatieve-technologie'} jobTitle={'Student Multimedia & Creative Technologies'} location={'Brussels'} duration={'Sept 2020 - June 2023'} />
       </div>
     </motion.section>
 
     
-    <motion.section
+    <motion.section className="technologies"
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0 }}
         transition={{ delay: 0.7 ,duration: 0.5, ease: "easeInOut" }}
     >
       <h2>Technologies</h2>
-      <p style={{ width:"75%"}}>I specialize in JavaScript, React, Node.js, and web development as a whole. <br></br>Here are a few technologies I have come to love:</p>
+      <p className="technologies-intro" style={{ width:"75%"}}>I specialize in JavaScript, React, Node.js, and web development as a whole. <br></br>Here are a few technologies I have come to love:</p>
       <div className="technologies-container">
         <Toolcard logo={reactLogo} name={'React'} siteURL={'https://reactjs.org/'} />
         <Toolcard logo={nextjsLogo} name={'Next.js'} siteURL={'https://nextjs.org/'} />

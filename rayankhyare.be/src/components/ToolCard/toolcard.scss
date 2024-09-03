@@ -14,3 +14,11 @@
         font-size: 17px;
     }
 }
+
+
+@media (max-width: 768px){
+    .tool-card{
+          flex: 0 0 calc(100% - 35px);
+          justify-content: center;
+    }
+}

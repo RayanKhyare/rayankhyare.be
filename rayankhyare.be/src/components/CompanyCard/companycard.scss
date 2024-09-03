@@ -22,4 +22,23 @@
         object-fit:cover;
     }
 
+    .duration{
+        text-align: right;
+    }
+
 }
+
+@media (max-width: 768px){
+    .company-card{
+        flex-direction: column;
+        .d-flex{
+            width: 100%;
+
+        }
+
+        .duration{
+            padding-left: 80px;
+            padding-top: 5px;
+        }
+    }
+  }

@@ -15,3 +15,18 @@
         }
     }
 }
+
+@media (max-width: 768px){
+    .projects{
+        .project{
+            width: calc(100% - 10px);
+    
+            img{
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                border-radius: 5px;
+                object-fit: cover;
+            }
+        }
+    } 
+}
