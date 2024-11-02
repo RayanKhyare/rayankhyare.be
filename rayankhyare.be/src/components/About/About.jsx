@@ -21,7 +21,7 @@ import figmaLogo from "../../assets/figma.svg";
 import discordLogo from "../../assets/discord.svg";
 import atIcon from "../../assets/at-icon.svg";
 import downloadBtn from "../../assets/downloadbtn.svg";
-import resume from "../../assets/rayankhyare_resume_en.pdf";
+import resume from "../../assets/cv_rayan_khyare_en.pdf";
 
 
 

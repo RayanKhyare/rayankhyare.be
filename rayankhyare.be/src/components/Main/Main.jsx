@@ -9,13 +9,14 @@ export default function Main() {
   
   useEffect(() => {
     async function getProjects() {
-      const projectIds = [1, 2, 3, 4]; // Replace with your desired project ids
+      const projectIds = [1, 10, 2, 3]; // Replace with your desired project ids
   
       const { data: projects } = await supabase
         .from('projects')
         .select()
         .in('id', projectIds)
-        .limit(4);
+        .limit(4)
+        .order('id', { ascending: true });
   
       if (projects.length > 0) {
         setProjects(projects);
